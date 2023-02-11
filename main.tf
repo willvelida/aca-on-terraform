@@ -46,6 +46,8 @@ resource "azurerm_container_app" "app" {
       cpu    = 0.25
       memory = "0.5Gi"
     }
+    min_replicas = 1
+    max_replicas = 3
   }
   ingress {
     external_enabled           = true
